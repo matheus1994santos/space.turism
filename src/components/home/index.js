@@ -15,7 +15,7 @@ export const Home = () => {
 
         <div>
           <CircleText>
-            EXPLORER
+            EXPLORE
           </CircleText>
         </div>
       </section>

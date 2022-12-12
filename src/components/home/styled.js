@@ -65,16 +65,17 @@ export const CircleText = styled.article`
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    border-radius: 150px;
-    width: 274px;
-    height: 274px;
+    border-radius: 240px;
+    /* width: 274px; */
+    /* height: 274px; */
+    padding: 115.5px  52px;
     margin-bottom: 10px;
     
     font-family: 'Bellefair';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 37px;
+    /* line-height: 30px; */
     /* identical to box height */
 
     letter-spacing: 2px;

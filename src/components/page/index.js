@@ -5,29 +5,34 @@ import DestinationDesk from '../../assets/destination/background-destination-des
 import CrewDesk from '../../assets/crew/background-crew-desktop.jpg'
 import TechnologyDesk from '../../assets/technology/background-technology-desktop.jpg'
 
-
-
 import { Menu } from '../menu'
 import { Home } from '../home'
 import { Destinations } from '../destination'
 import { Crew } from '../crew'
-
-import { StyledPage } from './styled'
 import { Technology } from '../technology'
 
-export const Page = () => {
-  const Data = require('../../data.json');
+import { StyledPage } from './styled'
+
+export const Page = ({Data}) => {
   const NewData = Object.keys(Data).map((props => props));
   const nameDestinations = Data.destination.map((props) => props.name);
 
+  const [menuActive, setMenuActive] = React.useState(0);
+
+
+  function handleClick({target}){
+      setMenuActive( menuActive + 1)
+  }
+
+  console.log(menuActive)
 
   return (
-    <StyledPage image={TechnologyDesk}>
-      <Menu list={NewData}/>
-      {/* <Home/> */}
-      {/* <Destinations listMenu={nameDestinations} data={Data.destinations}/> */}
+    <StyledPage image={HomeDesk}>
+      <Menu list={NewData} onClick={handleClick}/>
+      <Home/>
+      {/* <Destinations listMenu={nameDestinations} data={Data.destination}/> */}
       {/* <Crew data={Data}/> */}
-      <Technology data={Data}/>
+      {/* <Technology data={Data}/> */}
     </StyledPage>
   )
 }

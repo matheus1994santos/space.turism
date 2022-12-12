@@ -35,6 +35,7 @@ export const Options = styled.nav`
     position: absolute;
     display: flex;
     align-items: center;
+    max-width: 829px;
     width: 811px;
     height: 96px;
     left: 610px;
@@ -61,8 +62,6 @@ export const Options = styled.nav`
             font-weight: 400;
             height: 86px;
             cursor: pointer;
-            /* padding: 36px 0; */
-            /* border-bottom: 1px solid white; */
         }
     }
 `;

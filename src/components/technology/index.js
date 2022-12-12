@@ -6,8 +6,6 @@ export const Technology = ({data = {}}) => {
   const tech = data.technology;
   const currentStep = 1;
 
-  console.log(tech)
-
   return (
     <Container>
       <section>
@@ -17,11 +15,11 @@ export const Technology = ({data = {}}) => {
         <Content>
           <TechText>
               <ButtonSlide>
-                { tech && tech.map( (props, index) => <StyledStep isActive={currentStep === index + 1}>{index + 1}</StyledStep> ) }
+                { tech && tech.map( (props, index) => <StyledStep key={index} isActive={currentStep === index + 1}>{index + 1}</StyledStep> ) }
               </ButtonSlide>
-              {tech && tech.map( ({name, description, index}) => (
+              {tech && tech.map( ({name, description}) => (
                 name === 'Launch vehicle' ?
-              <div>
+              <div key={name}>
                 <span>THE TERMINOOGY...</span>
                 <NameTech>{name.toUpperCase()}</NameTech>
                 <p>{description}</p>

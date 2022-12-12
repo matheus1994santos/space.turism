@@ -1,11 +1,15 @@
 import React from 'react'
 
 import Moon from '../../assets/destination/image-moon.png'
+import Europa from '../../assets/destination/image-europa.png'
+import Mars from '../../assets/destination/image-mars.png'
+import Titan from '../../assets/destination/image-titan.png'
+
 
 import { BoxMoon, BoxText, Container, StyledDistanceTravel, StyledNameDescription } from './styled'
 
 export const Destinations = ({listMenu, data}) => {
-  console.log('Arquivos de destination: ',data)
+  // console.log('Arquivos de destination: ',data)
 
   return (
     <Container>
@@ -26,9 +30,9 @@ export const Destinations = ({listMenu, data}) => {
             </nav>
             {data && data.map(({name, description, distance, travel}) => (
                 name === 'Moon' ? 
-                <div>
+                <div key={name}>
                   <StyledNameDescription>
-                    <h1 key={name}> {name.toUpperCase()} </h1>
+                    <h1> {name.toUpperCase()} </h1>
                     <p>{description}</p>
                   </StyledNameDescription>
 
