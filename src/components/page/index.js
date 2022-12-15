@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import HomeDesk from '../../assets/home/background-home-desktop.jpg'
 import DestinationDesk from '../../assets/destination/background-destination-desktop.jpg'
@@ -16,23 +17,25 @@ import { StyledPage } from './styled'
 export const Page = ({Data}) => {
   const NewData = Object.keys(Data).map((props => props));
   const nameDestinations = Data.destination.map((props) => props.name);
-
-  const [menuActive, setMenuActive] = React.useState(0);
+  const [ ativo, setAtivo ] = React.useState(null)
 
 
   function handleClick({target}){
-      setMenuActive( menuActive + 1)
+    setAtivo(target.innerText)
+    console.log(ativo)
   }
 
-  console.log(menuActive)
-
   return (
-    <StyledPage image={HomeDesk}>
-      <Menu list={NewData} onClick={handleClick}/>
-      <Home/>
-      {/* <Destinations listMenu={nameDestinations} data={Data.destination}/> */}
-      {/* <Crew data={Data}/> */}
-      {/* <Technology data={Data}/> */}
-    </StyledPage>
+    <BrowserRouter>
+      <StyledPage image={HomeDesk}>
+        <Menu list={NewData} callback={handleClick}/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/destination' element={<Destinations listMenu={nameDestinations} data={Data.destination}/>}/>
+          <Route path='/crew' element={<Crew data={Data}/>}/>
+          <Route path='/technology' element={<Technology data={Data}/>}/>
+        </Routes>
+      </StyledPage>
+    </BrowserRouter>
   )
 }

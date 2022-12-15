@@ -35,11 +35,12 @@ export const Options = styled.nav`
     position: absolute;
     display: flex;
     align-items: center;
-    max-width: 829px;
-    width: 811px;
+    max-width: 722px;
+    width: 100%;
     height: 96px;
     left: 610px;
     top: 40px;
+    padding-left: 90px;
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(39.7742px);
     color: white;
@@ -47,11 +48,10 @@ export const Options = styled.nav`
     & ul{
         display: flex;
         list-style-type: none;
-        margin-left: 90px;
         gap: 40px;
         font-family: 'Barlow Condensed';
 
-        & li{
+        & a{
             display: flex;
             align-items: center;
             font-size: 16px;
@@ -62,6 +62,14 @@ export const Options = styled.nav`
             font-weight: 400;
             height: 86px;
             cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        
+        .active{
+            border-bottom: 1px solid white;
         }
     }
+
 `;

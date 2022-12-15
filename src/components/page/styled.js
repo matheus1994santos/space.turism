@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import HomeDesk from '../../assets/home/background-home-desktop.jpg'
 
 export const StyledPage = styled.main`
     width: 100%;
