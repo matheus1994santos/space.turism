@@ -1,10 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import HomeDesk from '../../assets/home/background-home-desktop.jpg'
-import DestinationDesk from '../../assets/destination/background-destination-desktop.jpg'
-import CrewDesk from '../../assets/crew/background-crew-desktop.jpg'
-import TechnologyDesk from '../../assets/technology/background-technology-desktop.jpg'
+import { imgVerif } from '../../img'
 
 import { Menu } from '../menu'
 import { Home } from '../home'
@@ -18,17 +15,20 @@ export const Page = ({Data}) => {
   const NewData = Object.keys(Data).map((props => props));
   const nameDestinations = Data.destination.map((props) => props.name);
   const [ ativo, setAtivo ] = React.useState(null)
+  let name;
 
+  React.useEffect(()=>{
+    setAtivo(document.documentURI)
+  },[ativo])
 
-  function handleClick({target}){
-    setAtivo(target.innerText)
-    console.log(ativo)
+  function click(e){
+    setAtivo(e.target.href)
   }
 
   return (
     <BrowserRouter>
-      <StyledPage image={HomeDesk}>
-        <Menu list={NewData} callback={handleClick}/>
+      <StyledPage image={imgVerif(ativo)}>
+        <Menu list={NewData} click={click}/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/destination' element={<Destinations listMenu={nameDestinations} data={Data.destination}/>}/>

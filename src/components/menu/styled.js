@@ -29,8 +29,6 @@ export const StyledMenu = styled.section`
     }
 `;
 
-
-
 export const Options = styled.nav`
     position: absolute;
     display: flex;
