@@ -11,6 +11,7 @@ import { Technology } from '../technology'
 
 import { StyledPage } from './styled'
 
+
 export const Page = ({Data}) => {
   const NewData = Object.keys(Data).map((props => props));
   const nameDestinations = Data.destination.map((props) => props.name);
@@ -25,9 +26,10 @@ export const Page = ({Data}) => {
     setAtivo(e.target.href)
   }
 
+
   return (
     <BrowserRouter>
-      <StyledPage image={imgVerif(ativo)}>
+      <StyledPage image={imgVerif(ativo)} >
         <Menu list={NewData} click={click}/>
         <Routes>
           <Route path='/' element={<Home/>}/>

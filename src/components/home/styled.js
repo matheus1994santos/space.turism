@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.section` /* full Screen 1707px */
     display: flex;
-    max-width: 1440px;
     padding: 0 auto;
     height: 640px;
 
@@ -10,10 +9,9 @@ export const Container = styled.section`
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        gap: 370px;
+        gap: 560px;
         height: 100%;
         margin: 0 auto;
-        /* border: 1px solid white; */
     }
 `;
 
@@ -23,7 +21,6 @@ export const BoxText = styled.div`
     justify-content: end;
     width: 450px;
     height: 382px;
-    /* margin-bottom: 40px; */
 
     & span{
         font-family: 'Barlow Condensed';
@@ -65,20 +62,14 @@ export const CircleText = styled.article`
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    border-radius: 240px;
-    /* width: 274px; */
-    /* height: 274px; */
-    padding: 115.5px  52px;
+    border-radius: 50%;
+    padding: 115.5px  62px;
     margin-bottom: 10px;
     
     font-family: 'Bellefair';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    /* line-height: 30px; */
-    /* identical to box height */
-
     letter-spacing: 2px;
-
     color: #0B0D17;
 `;

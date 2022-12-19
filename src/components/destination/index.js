@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import Moon from '../../assets/destination/image-moon.png'
 import Europa from '../../assets/destination/image-europa.png'
@@ -9,7 +10,10 @@ import Titan from '../../assets/destination/image-titan.png'
 import { BoxMoon, BoxText, Container, StyledDistanceTravel, StyledNameDescription } from './styled'
 
 export const Destinations = ({listMenu, data}) => {
-  // console.log('Arquivos de destination: ',data)
+
+  function activeStyle(){
+ 
+  }
 
   return (
     <Container>
@@ -24,15 +28,20 @@ export const Destinations = ({listMenu, data}) => {
             <nav>
               <ul>
                 {listMenu && listMenu.map((name, index) => (
-                  <li key={index}>{name.toUpperCase()}</li>
+                  <li 
+                  key={index}
+                  onClick={activeStyle}
+                  >
+                   {name}
+                  </li>
                 ))}
               </ul>
             </nav>
-            {data && data.map(({name, description, distance, travel}) => (
-                name === 'Moon' ? 
+            {data && data.map(({name, description, distance, travel}, index) => (
+                index === 0 ? 
                 <div key={name}>
                   <StyledNameDescription>
-                    <h1> {name.toUpperCase()} </h1>
+                    <h1> {name} </h1>
                     <p>{description}</p>
                   </StyledNameDescription>
 

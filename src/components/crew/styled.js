@@ -1,20 +1,18 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.section` /* full Screen 1707px */
     padding: 0 10.6%;
-    /* border: 1px solid red; */
     height: auto;
 
     & section{
       display: flex;
-      /* border: 1px solid white; */
+      gap: 262px;
       height: 100%;
     }
 `;
 
 export const BoxCrew = styled.div`
     margin-top: 90px;
-    width: 100%;
 
     & p{
       width: 444px;
@@ -29,7 +27,7 @@ export const BoxCrew = styled.div`
         width: 488px;
         mix-blend-mode: normal;
         opacity: 0.25;
-        margin-right: 10px;
+        /* margin-right: 10px; */
       }
     }
 `;
@@ -37,11 +35,11 @@ export const BoxCrew = styled.div`
 
 export const BoxImgCrew = styled.div`
     display: flex;
+    /* margin-left: -60px; */
   
     & img{
-      margin-top: 90px;
+      margin-top: 18px;
       height: 672px;
-      margin-right: 16px;
     }
 `;
 

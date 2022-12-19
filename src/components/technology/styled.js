@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.section` /* full Screen 1707px */
     padding-left:10.6%;
-    /* border: 1px solid red; */
     height: auto;
 
     & section{
       display: flex;
       flex-direction: column;
-      /* border: 1px solid white; */
       height: 100%;
       gap: 40px;
     }
@@ -46,7 +44,10 @@ export const TitleTech = styled.div`
 export const Content = styled.div`
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid blue; */
+
+    @media (max-width: 1800px){
+      padding-right: 110px;
+    }
 
     & img{
       width: 515px;
@@ -96,7 +97,6 @@ export const ButtonSlide = styled.div`
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    /* border: 1px solid tomato; */
     gap: 40px;
     `;
 

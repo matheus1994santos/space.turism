@@ -3,12 +3,10 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     padding: 0 10.2%;
-    /* height: 100%; */
-    /* border: 1px solid red; */
 
     & section{
       display: flex;
-      /* border: 1px solid white; */
+      gap: 20px;
       height: 100%;
     }
 `;
@@ -45,7 +43,7 @@ export const BoxMoon = styled.div`
     & img{
       position: relative;
       left: 76px;
-      width: 405px;
+      width: 445px;
       height: 445px; 
       background-repeat : no-repeat;
       background-size: cover;
@@ -58,7 +56,6 @@ export const BoxText = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid green; */
 
     & article{
       position: relative;
@@ -102,7 +99,8 @@ export const BoxText = styled.div`
             letter-spacing: 2.7px;
             color: #FFFFFF;
             padding-bottom: 10px;
-            /* border-bottom: 2px solid white; */
+            text-transform: uppercase;
+            /* border-bottom: 0.5px solid ${ props => !props.isActive ? 'rgb(255, 255, 255, 0.2)': 'transparent' }; */
           }
         }
       }
@@ -122,7 +120,8 @@ export const StyledNameDescription = styled.div`
       font-weight: 400;
       font-size: 100px;
       line-height: 115px;
-      color: #FFFFFF;      
+      color: #FFFFFF;    
+      text-transform: uppercase;  
     }
 
     & p{
