@@ -6,13 +6,15 @@ export const Container = styled.section` /* full Screen 1707px */
 
     & section{
       display: flex;
-      gap: 262px;
+      justify-content: space-between;
+      gap: 120px;
       height: 100%;
     }
 `;
 
 export const BoxCrew = styled.div`
     margin-top: 90px;
+    
 
     & p{
       width: 444px;
@@ -35,11 +37,13 @@ export const BoxCrew = styled.div`
 
 export const BoxImgCrew = styled.div`
     display: flex;
-    /* margin-left: -60px; */
+    padding-right: 52px;
+    padding-top: 60px;
   
     & img{
+      max-width: 568px;
       margin-top: 18px;
-      height: 672px;
+      max-height: 712px;
     }
 `;
 
@@ -47,6 +51,7 @@ export const InfoCrew = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 140px;
+
 
     & div{
       & span{
@@ -59,15 +64,13 @@ export const InfoCrew = styled.div`
         color: #FFFFFF;
       }
       
-      & div > p{
+      & p{
         font-family: 'Barlow';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
+        height: 180px;
         line-height: 32px;
-        /* or 178% */
-
-
         color: #D0D6F9;
       }
     }

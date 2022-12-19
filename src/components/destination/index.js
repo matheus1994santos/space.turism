@@ -1,26 +1,36 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-import Moon from '../../assets/destination/image-moon.png'
-import Europa from '../../assets/destination/image-europa.png'
-import Mars from '../../assets/destination/image-mars.png'
-import Titan from '../../assets/destination/image-titan.png'
+import { Page } from '../page'
+
+import requestData from '../../utils/requestdata'
+
+import { sateVerif } from './helpers'
+
+
 
 
 import { BoxMoon, BoxText, Container, StyledDistanceTravel, StyledNameDescription } from './styled'
 
-export const Destinations = ({listMenu, data}) => {
+export const Destinations = () => {
+  const [sate, setSate] = React.useState(null);
+  const data = requestData();
+  const listMenu = data.destination.map((dest) => dest.name);
+  
+  React.useEffect(()=>{
+    setSate(!sate ? 'Moon' : sate) 
+  },[sate])
 
-  function activeStyle(){
- 
+  function activeStyle(e){
+    setSate(e.target.innerHTML)
   }
 
   return (
+    <Page>
     <Container>
       <section>
         <BoxMoon>
           <p><span>01</span>  PICK YOUR DESTINATION</p>
-          <img src={Moon}/>
+          <img src={sateVerif(sate)}/>
         </BoxMoon>
 
         <BoxText>
@@ -31,14 +41,15 @@ export const Destinations = ({listMenu, data}) => {
                   <li 
                   key={index}
                   onClick={activeStyle}
+                  className={name === sate ? 'active' : ''}
                   >
                    {name}
                   </li>
                 ))}
               </ul>
             </nav>
-            {data && data.map(({name, description, distance, travel}, index) => (
-                index === 0 ? 
+            {data && data.destination.map(({name, description, distance, travel}, index) => (
+                sate === name ? 
                 <div key={name}>
                   <StyledNameDescription>
                     <h1> {name} </h1>
@@ -61,5 +72,6 @@ export const Destinations = ({listMenu, data}) => {
         </BoxText>
       </section>
     </Container>
+    </Page>
   )
 }

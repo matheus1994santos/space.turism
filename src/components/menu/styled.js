@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const StyledMenu = styled.section`/* full Screen 1707px */
     padding: 54px 0 0 4%;
     color: black;

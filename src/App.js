@@ -1,13 +1,12 @@
 import React from "react";
-import { Page } from "./components/page";
+import Routes from "./components/Routes";
 
 
 
 function App() {
-  const Data = require('./data.json');
-
+  
   return (
-    <Page Data={Data}/>
+    <Routes />
   );
 }
 

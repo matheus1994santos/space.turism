@@ -115,7 +115,7 @@ export const StyledStep = styled.button`
       border-radius:80px;
       border: 0.5px solid ${ props => !props.isActive ? 'rgb(255, 255, 255, 0.2)': 'transparent' };
       cursor: pointer;
-      `;
+`;
 export const NameTech = styled.div`
     font-family: 'Bellefair';
     font-style: normal;

@@ -6,7 +6,7 @@ import Logo from '../../assets/shared/logo.svg'
 import { Options, StyledMenu } from './styled'
 
 
-export const Menu = ({list, click}) => {
+export const Menu = ({list}) => {
   // const widthScreen = window.innerWidth;
   // const CaracterUP = (str) => str[0].toUpperCase() + str.slice(1);
 
@@ -17,12 +17,11 @@ export const Menu = ({list, click}) => {
             <div></div>
             <Options>
                 <ul>
-                  <NavLink to={'/'} onClick={click}><li>00 Home</li></NavLink>
+                  <NavLink to={'/'}><li>00 Home</li></NavLink>
                   {list && list.map((name, index) => (
                     <NavLink 
                       to={`/${name}`}
                       key={name}
-                      onClick={click}
                     >
                       0{ index + 1 } { name}
                     </NavLink>

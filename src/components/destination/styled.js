@@ -100,7 +100,11 @@ export const BoxText = styled.div`
             color: #FFFFFF;
             padding-bottom: 10px;
             text-transform: uppercase;
-            /* border-bottom: 0.5px solid ${ props => !props.isActive ? 'rgb(255, 255, 255, 0.2)': 'transparent' }; */
+            border-bottom: ${ props => props.isActive};
+          }
+
+          .active{
+            border-bottom: 0.5px solid rgb(255, 255, 255);
           }
         }
       }
