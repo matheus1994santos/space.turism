@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 
-export const StyledMenu = styled.section`
-    padding: 40px 0 0 4%;
+export const StyledMenu = styled.section`/* full Screen 1707px */
+    padding: 54px 0 0 4%;
     color: black;
     
     & div{
         display: flex;
         height: 96px;
         align-items: center;
-        /* justify-content: space-between; */
+        justify-content: space-between;
 
         & img{
           width: 46px;
@@ -17,12 +17,12 @@ export const StyledMenu = styled.section`
         }
 
         & div{
-            position: absolute;
+            position: relative;
             width: 473px;
             height: 1px;
-            left: 167px;
-            top: 88px;
-            background-color: #979797;
+            left: 6.5%; 
+            border: none;
+            border-top: 1px solid #979797;
             opacity: 0.25;
             z-index: 1;
         }
@@ -30,15 +30,11 @@ export const StyledMenu = styled.section`
 `;
 
 export const Options = styled.nav`
-    position: absolute;
     display: flex;
     align-items: center;
-    max-width: 722px;
+    max-width: 970px;
     width: 100%;
     height: 96px;
-    left: 610px;
-    top: 40px;
-    padding-left: 90px;
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(39.7742px);
     color: white;
@@ -46,8 +42,10 @@ export const Options = styled.nav`
     & ul{
         display: flex;
         list-style-type: none;
-        gap: 40px;
+        gap: 46px;
         font-family: 'Barlow Condensed';
+        padding-left: 16%;
+
 
         & a{
             display: flex;
