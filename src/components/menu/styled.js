@@ -58,7 +58,7 @@ export const Options = styled.nav`
             letter-spacing: 2.7px;
             text-transform: uppercase;
             font-weight: 400;
-            height: 86px;
+            height: 94px;
             cursor: pointer;
             text-decoration: none;
             color: white;
