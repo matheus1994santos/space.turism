@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { screenSizeWidth, screenSizeHeight } from "../../utils/screensize";
+
 const screenHeight = window.screen.height;
 
 export const StyledPage = styled.main` /* full Screen 1707px */
@@ -11,5 +13,6 @@ export const StyledPage = styled.main` /* full Screen 1707px */
     background-image: url(${props => props.image});
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     font-family: 'Barlow Condensed', 'Barlow', 'Bellefair';
 `;

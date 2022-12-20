@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
+import { screenSizeWidth } from "../../utils/screensize";
+
+console.log(screenSizeWidth)
+
 export const StyledMenu = styled.section`/* full Screen 1707px */
-    padding: 54px 0 0 4%;
+    padding: 58px 0 0 4%;
     color: black;
+
     
     & div{
         display: flex;
@@ -11,19 +16,44 @@ export const StyledMenu = styled.section`/* full Screen 1707px */
         justify-content: space-between;
 
         & img{
-          width: 46px;
-          height: 46px;
+          width: 66px;
+          height: 66px;
         }
 
         & div{
             position: relative;
-            width: 473px;
+            width: 573px;
             height: 1px;
-            left: 6.5%; 
+            left: 4.5%; 
             border: none;
             border-top: 1px solid #979797;
             opacity: 0.25;
             z-index: 1;
+        }
+    }
+
+    @media (max-width: 1440px) {
+        padding: 50px 0 0 4%;
+
+        & div{
+            & img{
+                width: 48px;
+                height: 48px;
+            }
+            & div{
+                width: 420px;
+            }
+        }
+    }
+
+    @media (max-width: 770px) {
+        padding: 0 0 0 4%;
+
+        & div{
+
+            & div{
+                display: none;
+            }
         }
     }
 `;
@@ -31,7 +61,7 @@ export const StyledMenu = styled.section`/* full Screen 1707px */
 export const Options = styled.nav`
     display: flex;
     align-items: center;
-    max-width: 970px;
+    max-width: 1090px;
     width: 100%;
     height: 96px;
     background-color: rgba(255, 255, 255, 0.04);
@@ -41,7 +71,7 @@ export const Options = styled.nav`
     & ul{
         display: flex;
         list-style-type: none;
-        gap: 46px;
+        gap: 88px;
         font-family: 'Barlow Condensed';
         padding-left: 16%;
 
@@ -67,4 +97,35 @@ export const Options = styled.nav`
         }
     }
 
+    @media (max-width: 1440px) {
+        max-width: 830px;
+
+        & ul{
+            gap: 60px;
+            padding-left: 18%;
+        }
+    }
+
+    @media (max-width: 770px) {
+        max-width: 450px;
+
+        & ul{
+            gap: 30px;
+            padding-left: 18%;
+
+            & a{
+                font-size: 13px; 
+
+            }
+        }
+    }
+
+`;
+
+export const NumberDesk = styled.span`
+    /* display: inline; */
+
+    @media (max-width: 770px) {
+        display: none;
+    }
 `;

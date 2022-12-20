@@ -3,11 +3,10 @@ import { Link, NavLink } from 'react-router-dom'
 
 import Logo from '../../assets/shared/logo.svg'
 
-import { Options, StyledMenu } from './styled'
+import { Options, StyledMenu, NumberDesk } from './styled'
 
 
 export const Menu = ({list}) => {
-  // const widthScreen = window.innerWidth;
   // const CaracterUP = (str) => str[0].toUpperCase() + str.slice(1);
 
   return (
@@ -17,13 +16,13 @@ export const Menu = ({list}) => {
             <div></div>
             <Options>
                 <ul>
-                  <NavLink to={'/'}><li>00 Home</li></NavLink>
+                  <NavLink to={'/'}><li><NumberDesk>00</NumberDesk> Home</li></NavLink>
                   {list && list.map((name, index) => (
                     <NavLink 
                       to={`/${name}`}
                       key={name}
                     >
-                      0{ index + 1 } { name}
+                    <li><NumberDesk>0{ index + 1 }</NumberDesk> { name}</li>
                     </NavLink>
                   ))}
                 </ul>

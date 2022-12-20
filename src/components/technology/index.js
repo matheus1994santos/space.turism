@@ -5,20 +5,12 @@ import requestData from '../../utils/requestdata'
 import { Page } from '../page'
 
 import { ButtonSlide, Container, Content, NameTech, StyledStep, TechText, TitleTech } from './styled'
-
-import Landscape from '../../assets/technology/image-launch-vehicle-portrait.jpg'
+import { technoImgVerif } from './helpers'
 
 export const Technology = () => {
   const data = requestData();
-  // const currentStep = 1;
 
-  const [ activeTech, setActiveTech ] = React.useState(1);
-  
-  function activeStyle(e){ 
-    setActiveTech(e.target.innerHTML) 
-    console.log(activeTech)
-  }
-
+  const [ currentStep, setCurrentStep ] = React.useState(0);
 
   return (
     <Page>
@@ -30,10 +22,10 @@ export const Technology = () => {
         <Content>
           <TechText>
               <ButtonSlide>
-                { data && data.technology.map( (props, index) => <StyledStep onClick={activeStyle} key={index} isActive={activeTech === index + 1}>{index + 1}</StyledStep> ) }
+                { data && data.technology.map( (props, index) => <StyledStep onClick={() => setCurrentStep(index)} key={index} isActive={currentStep === index}>{index + 1}</StyledStep> ) }
               </ButtonSlide>
               {data && data.technology.map( ({name, description}, index) => (
-                name === 'Launch vehicle' ?
+                currentStep === index ?
               <div key={name}>
                 <span>THE TERMINOOGY...</span>
                 <NameTech>{name.toUpperCase()}</NameTech>
@@ -43,7 +35,7 @@ export const Technology = () => {
               ) )}
           </TechText>
 
-          <img src={Landscape} />
+          <img src={technoImgVerif(currentStep)} />
         </Content>
       </section>
     </Container>
