@@ -13,6 +13,13 @@ export const Container = styled.section`
         padding-left: 120px;
         gap: 0;
       }
+
+      @media (max-width: 770px){
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        padding-top: 20px;
+      }
     }
 
     @media (max-width: 1440px){
@@ -32,6 +39,14 @@ export const BoxMoon = styled.div`
     height: 100%;
     gap: 64px;
 
+    @media (max-width: 770px){
+      position: none;
+      left: 0;
+      top: 0;
+      gap: 30px;
+      align-items: initial;
+    }
+
     & p{
       font-family: 'Barlow Condensed';
       font-style: normal;
@@ -47,6 +62,12 @@ export const BoxMoon = styled.div`
         mix-blend-mode: normal;
         opacity: 0.25;
       }
+
+      @media (max-width: 770px){
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 30px;
+      }
     }
 
     & img{
@@ -56,6 +77,13 @@ export const BoxMoon = styled.div`
       height: 445px; 
       background-repeat : no-repeat;
       background-size: cover;
+
+      @media (max-width: 770px){
+        left: 240px;
+        margin: 0;
+        width: 300px;
+        height: 300px; 
+      }
     }
 `;
 
@@ -82,8 +110,7 @@ export const BoxText = styled.div`
         width: 445px;
 
         & nav{
-          margin-top: 60px;
-          padding-top: 10px;
+          padding-top: 70px;
           border-top: 1px solid #383B4B;
         }
       }
@@ -116,7 +143,21 @@ export const BoxText = styled.div`
           .active{
             border-bottom: 0.5px solid rgb(255, 255, 255);
           }
+
+          @media (max-width: 770px){
+            padding-left: 110px;
+          } 
         }
+      }
+    }
+
+    @media (max-width: 770px){
+      margin: 0;
+
+      & article {
+        position: none;
+        top: 0;
+        left: 0;
       }
     }
 `;
@@ -149,6 +190,23 @@ export const StyledNameDescription = styled.div`
       color: #D0D6F9;
       font-weight: 100;
     }
+
+    @media (max-width: 770px){
+      align-items: center;
+
+      & h1{
+        padding-left: 30px;
+        font-size: 70px;
+        line-height: 92px;
+      }
+
+      & p{
+        padding-left: 10px;
+        text-align: center;
+        font-size: 12.5px;
+        line-height: 28px;
+      }
+    }
 `;
 
 export const StyledDistanceTravel = styled.div`
@@ -175,6 +233,20 @@ export const StyledDistanceTravel = styled.div`
       line-height: 32px;
       text-transform: uppercase;
       color: #FFFFFF;      
+    }
+
+    @media (max-width: 770px){
+      align-items: center;
+
+      & p{
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      & h2{
+        font-size: 24px;
+        line-height: 28px;
+      }
     }
 `;
 

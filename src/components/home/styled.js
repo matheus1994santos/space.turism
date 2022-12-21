@@ -14,6 +14,13 @@ export const Container = styled.section` /* full Screen 1707px */
         @media (max-width: 1440px){
             padding-top: 344px;
         }
+
+        @media (max-width: 770px){
+            padding: 0;
+            padding-top: 100px;
+            flex-direction: column;
+            gap: 106px;
+        }
     }
 
     @media (max-width: 1440px){
@@ -29,10 +36,6 @@ export const BoxText = styled.div`
     height: 382px;
     padding-left: 76px;
 
-    @media (max-width: 1440px){
-        margin-top: -10px;
-        padding-left: 136px;
-    }
 
     & span{
         font-family: 'Barlow Condensed';
@@ -66,6 +69,32 @@ export const BoxText = styled.div`
         color: #D0D6F9;  
         text-align: justify; 
     }
+
+    @media (max-width: 1440px){
+        margin-top: -10px;
+        padding-left: 136px;
+        
+    }
+
+    @media (max-width: 770px){
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+        & span{
+            font-size: 16px;
+        }
+
+        & h1{
+            line-height: 150px;
+        }
+
+        & p{
+            text-align: center;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
 `;
 
 
@@ -86,5 +115,9 @@ export const CircleText = styled.article`
 
     @media (max-width: 1440px){
       margin-right: 60px;
+    }
+
+    @media (max-width: 1440px){
+      margin-right: 0;
     }
 `;
