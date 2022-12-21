@@ -159,6 +159,10 @@ export const BoxText = styled.div`
         top: 0;
         left: 0;
       }
+
+      & nav{
+        padding-top: 20px;
+      }
     }
 `;
 

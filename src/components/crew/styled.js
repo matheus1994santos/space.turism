@@ -173,5 +173,10 @@ export const Slide = styled.ul`
 
     @media (max-width: 770px){
      padding-top: 0;
+
+     & li{
+      width: 10px;
+      height: 10px;
+     }
     }
 `;
