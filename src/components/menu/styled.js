@@ -33,7 +33,7 @@ export const StyledMenu = styled.section`/* full Screen 1707px */
     }
 
     @media (max-width: 1440px) {
-        padding: 50px 0 0 4%;
+        padding: 38px 0 0 4%;
 
         & div{
             & img{
@@ -41,7 +41,8 @@ export const StyledMenu = styled.section`/* full Screen 1707px */
                 height: 48px;
             }
             & div{
-                width: 420px;
+                width: 440px;
+                left: 5.2%;
             }
         }
     }
@@ -95,6 +96,10 @@ export const Options = styled.nav`
         .active{
             border-bottom: 1px solid white;
         }
+    }
+
+    @media (max-width: 1710px) {
+        max-width: 960px;
     }
 
     @media (max-width: 1440px) {

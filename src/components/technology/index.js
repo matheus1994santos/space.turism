@@ -22,7 +22,15 @@ export const Technology = () => {
         <Content>
           <TechText>
               <ButtonSlide>
-                { data && data.technology.map( (props, index) => <StyledStep onClick={() => setCurrentStep(index)} key={index} isActive={currentStep === index}>{index + 1}</StyledStep> ) }
+                { data && data.technology.map( (props, index) => (
+                  <StyledStep 
+                    onClick={() => setCurrentStep(index)} 
+                    key={index} 
+                    isActive={currentStep === index}
+                    >
+                    {index + 1}
+                  </StyledStep>
+                ) ) }
               </ButtonSlide>
               {data && data.technology.map( ({name, description}, index) => (
                 currentStep === index ?
