@@ -1,19 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.section` /* full Screen 1707px */
-    padding: 0 10.6%;
+    padding: 66px 10.6% 0 10.6%;
     height: auto;
 
     & section{
       display: flex;
       justify-content: space-between;
-      gap: 120px;
       height: 100%;
+    }
+
+    @media (max-width: 1440px){
+      padding-right: 0;
+      padding-top: 86px;
     }
 `;
 
 export const BoxCrew = styled.div`
-    margin-top: 90px;
+    padding-top: 90px;
+    margin-left: 3.8%;
     
 
     & p{
@@ -21,7 +26,7 @@ export const BoxCrew = styled.div`
       font-family: 'Barlow';
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 28px;
       line-height: 32px;
       color: #D0D6F9;
 
@@ -29,7 +34,7 @@ export const BoxCrew = styled.div`
         width: 488px;
         mix-blend-mode: normal;
         opacity: 0.25;
-        /* margin-right: 10px; */
+        margin-right: 10px;
       }
     }
 `;
@@ -37,20 +42,29 @@ export const BoxCrew = styled.div`
 
 export const BoxImgCrew = styled.div`
     display: flex;
-    padding-right: 52px;
+    padding-right: 110px;
     padding-top: 60px;
   
     & img{
       max-width: 568px;
-      margin-top: 18px;
+      padding-top: 18px;
       max-height: 712px;
+
+      @media (max-width: 1440px){
+        padding-right: 0;
+      }
+      
+    }
+
+    @media (max-width: 1440px){
+      padding-right: 110px;
     }
 `;
 
 export const InfoCrew = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 140px;
+  padding-top: 140px;
 
 
     & div{
@@ -86,13 +100,12 @@ export const Role = styled.div`
   color: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.5;
-  margin-bottom: 16px;
 `;
 
 export const Slide = styled.ul`
     margin: 0;
     padding: 0;
-    margin-top: 80px;
+    padding-top: 80px;
     list-style-type: none; 
     display: flex;
     gap: 10px;

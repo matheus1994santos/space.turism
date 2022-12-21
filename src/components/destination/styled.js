@@ -6,21 +6,31 @@ export const Container = styled.section`
 
     & section{
       display: flex;
-      gap: 20px;
+      gap: 160px;
       height: 100%;
+
+      @media (max-width: 1440px){
+        padding-left: 120px;
+        gap: 0;
+      }
+    }
+
+    @media (max-width: 1440px){
+      padding: 0;
     }
 `;
 
 
 export const BoxMoon = styled.div`
     position: relative;
-    top: 35px;
+    top: 55px;
+    left: 38px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    gap: 40px;
+    gap: 64px;
 
     & p{
       font-family: 'Barlow Condensed';
@@ -36,7 +46,6 @@ export const BoxMoon = styled.div`
       & span{
         mix-blend-mode: normal;
         opacity: 0.25;
-        margin-right: 10px;
       }
     }
 
@@ -56,6 +65,7 @@ export const BoxText = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
 
     & article{
       position: relative;

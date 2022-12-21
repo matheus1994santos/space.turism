@@ -48,7 +48,7 @@ export const Destinations = () => {
                 ))}
               </ul>
             </nav>
-            {data && data.destination.map(({name, description, distance, travel}, index) => (
+            {data && data.destination.map(({name, description, distance, travel}) => (
                 sate === name ? 
                 <div key={name}>
                   <StyledNameDescription>

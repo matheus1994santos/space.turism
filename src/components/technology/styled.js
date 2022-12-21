@@ -5,6 +5,7 @@ export const Container = styled.section` /* full Screen 1707px */
     height: auto;
 
     & section{
+      margin-top: 50px;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -22,9 +23,15 @@ export const TitleTech = styled.div`
     line-height: 34px;
     letter-spacing: 4.725px;
     color: #FFFFFF;
+    margin-left: 68px;
+    margin-top: 40px;
+
+    @media (max-width: 1440px){
+      margin-left: 46px;
+    }
 
     & p{
-      margin-right: 10px;
+      margin-right: 14px;
       font-family: 'Barlow Condensed';
       font-style: normal;
       font-weight: 700;
@@ -46,14 +53,20 @@ export const Content = styled.div`
     justify-content: space-between;
 
     @media (max-width: 1800px){
-      padding-right: 110px;
+      /* padding-right: 110px; */
     }
 
     & img{
-      width: 515px;
-      height: 527px;
+      margin-top: -50px;
+      width: 615px;
+      height: 627px;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @media (max-width: 1440px){
+        width: 515px;
+        height: 527px;
+      }
     }
 `;
 
@@ -61,7 +74,12 @@ export const TechText = styled.div`
     display: flex;
     gap: 80px;
     padding-top: 100px;
+    padding-left: 90px;
     width: 100%;
+
+    @media (max-width: 1440px){
+      padding-left: 40px;
+    }
 
     & div{
       display: flex;

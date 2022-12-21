@@ -6,3 +6,7 @@ const size = {
    tablet: '768px',
    mobile: '375px'
 }
+
+export const device = {
+  desktop: `max-width`
+}

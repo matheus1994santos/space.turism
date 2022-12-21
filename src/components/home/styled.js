@@ -1,17 +1,23 @@
 import styled from "styled-components";
 
 export const Container = styled.section` /* full Screen 1707px */
-    display: flex;
-    padding: 0 auto;
-    height: 640px;
+    padding: 0 10.6%;
+    height: auto;
 
     & section{
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        gap: 560px;
+        align-items: center;
         height: 100%;
-        margin: 0 auto;
+        padding-top: 306px;
+
+        @media (max-width: 1440px){
+            padding-top: 344px;
+        }
+    }
+
+    @media (max-width: 1440px){
+        padding: 0 4%;
     }
 `;
 
@@ -21,6 +27,12 @@ export const BoxText = styled.div`
     justify-content: end;
     width: 450px;
     height: 382px;
+    padding-left: 76px;
+
+    @media (max-width: 1440px){
+        margin-top: -10px;
+        padding-left: 136px;
+    }
 
     & span{
         font-family: 'Barlow Condensed';
@@ -65,11 +77,14 @@ export const CircleText = styled.article`
     border-radius: 50%;
     padding: 115.5px  62px;
     margin-bottom: 10px;
-    
     font-family: 'Bellefair';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     letter-spacing: 2px;
     color: #0B0D17;
+
+    @media (max-width: 1440px){
+      margin-right: 60px;
+    }
 `;
