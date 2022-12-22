@@ -105,9 +105,11 @@ export const InfoCrew = styled.div`
         color: #FFFFFF;
 
         @media (max-width: 770px){
+          display: block;
           font-size: 38px;
           line-height: 52px;
-          padding-left: 64px;
+          text-align: center;
+          /* padding-left: 64px; */
         }
       }
       
