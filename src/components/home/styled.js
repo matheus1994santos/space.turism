@@ -21,6 +21,14 @@ export const Container = styled.section` /* full Screen 1707px */
             flex-direction: column;
             gap: 106px;
         }
+
+        @media (max-width: 500px){
+            padding: 0;
+            padding-top: 40px;
+            flex-direction: column;
+            gap: 230px;
+            height: 667;
+        }
     }
 
     @media (max-width: 1440px){
@@ -68,6 +76,7 @@ export const BoxText = styled.div`
         line-height: 32px;
         color: #D0D6F9;  
         text-align: justify; 
+        margin: 0;
     }
 
     @media (max-width: 1440px){
@@ -82,11 +91,12 @@ export const BoxText = styled.div`
         align-items: center;
 
         & span{
-            font-size: 16px;
+            font-size: 14px;
         }
 
         & h1{
-            line-height: 150px;
+            font-size: 80px;
+            line-height: 100px;
         }
 
         & p{
@@ -100,15 +110,23 @@ export const BoxText = styled.div`
         padding: 0;
         justify-content: center;
         align-items: center;
+        height: auto;
+
+        & span{
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
 
         & h1{
-            font-size: 100px;
+            font-size: 110px;
+            padding-bottom: 20px;
         }
 
         & p{
             text-align: center;
-            width: 327px;
-            font-size: 15px;
+            padding: 0 28px;
+            width: initial;
+            font-size: 18px;
             line-height: 28px;
         }
     }
@@ -140,8 +158,8 @@ export const CircleText = styled.article`
     @media (max-width: 500px){
         padding: 0;
         padding: 0;
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
         font-size: 20px;
     }
 `;

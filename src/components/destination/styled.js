@@ -117,6 +117,14 @@ export const BoxText = styled.div`
         & nav{
           padding-top: 70px;
           border-top: 1px solid #383B4B;
+
+          @media (max-width: 500px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+          }
         }
       }
 
@@ -240,6 +248,7 @@ export const StyledNameDescription = styled.div`
 
       & p{
         width: 402px;
+        height: 128px;
         padding-left: 10px;
         text-align: center;
         font-size: 15px;

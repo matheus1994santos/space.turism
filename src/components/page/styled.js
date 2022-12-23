@@ -21,6 +21,6 @@ export const StyledPage = styled.main` /* full Screen 1707px */
     }
 
     @media (max-width: 500px){
-      max-height: 667px;
+      max-height: 906px;
     }
 `;

@@ -147,6 +147,7 @@ export const OptionsMobile = styled.nav`
     backdrop-filter: blur(39.7742px);
     color: white;
     height: 667px;
+    padding-top: 40px;
 
     & ul{
         display: flex;
@@ -181,7 +182,17 @@ export const OptionsMobile = styled.nav`
         & img{
             width: 19.09px;
             height: 19.09px;
+            cursor: pointer;
         }
     }
 `;
 
+export const IconHamburger = styled.nav`
+    width: 60px;
+    
+    & img.Burger{
+        width: 24px;
+        height: 21px; 
+        cursor: pointer;
+    }
+`;

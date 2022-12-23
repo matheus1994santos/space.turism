@@ -37,7 +37,7 @@ export function imgVerif(path){
     }
   }
 
-  if( screenSizeWidth > 375 ){
+  if( screenSizeWidth > 500 ){
     if(path === '/destination'){
       return DestinationTablet;
     } 
