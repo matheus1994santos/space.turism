@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.section` /* full Screen 1707px */
-    padding: 66px 10.6% 0 10.6%;
+    padding: 56px 10.6% 0 10.6%;
     height: auto;
-
+  
     & section{
       display: flex;
       justify-content: space-between;
@@ -12,11 +12,15 @@ export const Container = styled.section` /* full Screen 1707px */
       @media (max-width: 770px){
         flex-direction: column;
       }
+
+      @media (max-width: 500px){
+        flex-direction: column-reverse;
+      }
     }
 
     @media (max-width: 1440px){
       padding-right: 0;
-      padding-top: 86px;
+      padding-top: 76px;
     }
 
     @media (max-width: 770px){
@@ -24,32 +28,42 @@ export const Container = styled.section` /* full Screen 1707px */
     }
 `;
 
+export const PageTitle = styled.div`
+  width: 444px;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  color: #D0D6F9;
+  padding-left: 60px;
+
+  & span{
+    width: 488px;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 770px){
+    padding-top: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 500px){
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 26px;
+    padding-bottom: 36px;
+  }
+`;
+
 export const BoxCrew = styled.div`
-    padding-top: 90px;
+    padding-top: 70px;
     padding-left: 3.8%;
-    
-    & p{
-      width: 444px;
-      font-family: 'Barlow';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 28px;
-      line-height: 32px;
-      color: #D0D6F9;
-
-      & span{
-        width: 488px;
-        mix-blend-mode: normal;
-        opacity: 0.25;
-        padding-right: 10px;
-      }
-
-      @media (max-width: 770px){
-        padding-top: 0;
-        font-size: 20px;
-        line-height: 24px;
-      }
-    }
 
     @media (max-width: 770px){
       padding-top: 20px;
@@ -59,11 +73,13 @@ export const BoxCrew = styled.div`
 export const BoxImgCrew = styled.div`
     display: flex;
     padding-right: 110px;
-    padding-top: 60px;
-  
+
+    & div{
+      display: none;
+    }
+
     & img{
       max-width: 568px;
-      padding-top: 18px;
       max-height: 712px;
 
       @media (max-width: 1440px){
@@ -73,6 +89,11 @@ export const BoxImgCrew = styled.div`
       @media (max-width: 770px){
         width: 458px;
         height: 552px;
+      }
+
+      @media (max-width: 500px){
+        width: 177.12px;
+        height: 242px;
       }
     }
 
@@ -85,6 +106,16 @@ export const BoxImgCrew = styled.div`
       padding-right: 0;
       width: 100%;
       justify-content: center;
+    }
+
+    @media (max-width: 500px){
+      flex-direction: column;
+      align-items: center;
+      & div{
+        display: flex;
+        width: 370px;
+        border-bottom: 1px solid #383B4B;
+      }
     }
 `;
 
@@ -127,6 +158,7 @@ export const InfoCrew = styled.div`
           line-height: 28px;
           text-align: center;
           height: 120px;
+          max-width: 458px;
         }
       }
     }
@@ -134,6 +166,25 @@ export const InfoCrew = styled.div`
     @media (max-width: 770px){
      padding-top: 0;
      align-items: center;
+    }
+
+    @media (max-width: 500px){
+      flex-direction: column-reverse;
+      gap: 30px;
+      padding-top: 26px;
+
+      & div{
+        & span{
+          font-size: 25px;
+          line-height: 29px;
+        }
+
+        & p{
+          font-size: 16px;
+          line-height: 26px;
+          width: 327px;
+        }
+      }
     }
 `;
 
@@ -152,6 +203,12 @@ export const Role = styled.div`
     font-size: 24px;
     line-height: 28px;
     text-align: center;
+  }
+
+  @media (max-width: 500px){
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 18px; 
   }
 `;
 
@@ -175,6 +232,15 @@ export const Slide = styled.ul`
 
     @media (max-width: 770px){
      padding-top: 0;
+
+     & li{
+      width: 10px;
+      height: 10px;
+     }
+    }
+
+    @media (max-width: 500px){
+    padding-bottom: 10px;
 
      & li{
       width: 10px;

@@ -5,7 +5,7 @@ import requestData from '../../utils/requestdata'
 import { Page } from '../page'
 
 import { crewVerif } from './helpers'
-import { BoxCrew, BoxImgCrew, Container, InfoCrew, Role, Slide } from './styled'
+import { BoxCrew, BoxImgCrew, Container, InfoCrew, PageTitle, Role, Slide } from './styled'
 
 
 export const Crew = () => {
@@ -23,9 +23,9 @@ export const Crew = () => {
   return (
     <Page>
     <Container>
+      <PageTitle><span>02</span> MEET YOUR CREW</PageTitle>
       <section>
         <BoxCrew>
-          <p><span>02</span> MEET YOUR CREW</p>
           <InfoCrew>
           {data && data.crew.map(({name, role, bio}) => (
             role === crewActive ? // Aqui é verificado se State for igual a uma das roles ele da print nos dados.
@@ -53,6 +53,7 @@ export const Crew = () => {
 
         <BoxImgCrew>
           <img src={crewVerif(crewActive)}/> 
+          <div></div>
         </BoxImgCrew>
         
       </section>

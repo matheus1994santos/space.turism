@@ -95,8 +95,24 @@ export const BoxText = styled.div`
             line-height: 28px;
         }
     }
-`;
 
+    @media (max-width: 500px){
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+        & h1{
+            font-size: 100px;
+        }
+
+        & p{
+            text-align: center;
+            width: 327px;
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+`;
 
 export const CircleText = styled.article`
     display: flex;
@@ -119,5 +135,13 @@ export const CircleText = styled.article`
 
     @media (max-width: 1440px){
       margin-right: 0;
+    }
+
+    @media (max-width: 500px){
+        padding: 0;
+        padding: 0;
+        width: 170px;
+        height: 170px;
+        font-size: 20px;
     }
 `;

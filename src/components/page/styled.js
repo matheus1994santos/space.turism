@@ -15,4 +15,12 @@ export const StyledPage = styled.main` /* full Screen 1707px */
     background-size: cover;
     background-position: center;
     font-family: 'Barlow Condensed', 'Barlow', 'Bellefair';
+
+    @media (max-width: 770px){
+      max-height: 1024px;
+    }
+
+    @media (max-width: 500px){
+      max-height: 667px;
+    }
 `;

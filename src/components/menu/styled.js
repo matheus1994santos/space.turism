@@ -124,7 +124,6 @@ export const Options = styled.nav`
             }
         }
     }
-
 `;
 
 export const NumberDesk = styled.span`
@@ -133,4 +132,56 @@ export const NumberDesk = styled.span`
     @media (max-width: 770px) {
         display: none;
     }
+
+    @media (max-width: 500px) {
+        display: initial;
+    }
 `;
+
+export const OptionsMobile = styled.nav`
+    display: flex;
+    flex-direction: column;
+    max-width: 254px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(39.7742px);
+    color: white;
+    height: 667px;
+
+    & ul{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        font-family: 'Barlow Condensed';
+        padding-bottom: 40px;
+        padding-top: 30px;
+
+        gap: 30px;
+
+        & a{
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 2.7px;
+            text-transform: uppercase;
+            font-weight: 400;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    & nav{
+        padding-top: 300px;
+        text-align: right;
+        padding-right: 20px;
+        & img{
+            width: 19.09px;
+            height: 19.09px;
+        }
+    }
+`;
+

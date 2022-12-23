@@ -40,9 +40,7 @@ export const BoxMoon = styled.div`
     gap: 64px;
 
     @media (max-width: 770px){
-      position: none;
-      left: 0;
-      top: 0;
+      position: initial;
       gap: 30px;
       align-items: initial;
     }
@@ -84,6 +82,13 @@ export const BoxMoon = styled.div`
         width: 300px;
         height: 300px; 
       }
+
+      @media (max-width: 500px){
+        position: initial;
+        width: 180px;
+        height: 180px;
+        padding-left: 150px;
+      }
     }
 `;
 
@@ -102,7 +107,7 @@ export const BoxText = styled.div`
       display: flex;
       flex-direction: column;
       width: 445px;
-      height: 472px;
+      /* height: 472px; */
 
       & div{
         display: flex;
@@ -147,6 +152,12 @@ export const BoxText = styled.div`
           @media (max-width: 770px){
             padding-left: 110px;
           } 
+
+          @media (max-width: 500px){
+            padding-left: 0;
+            width: 100%;
+            justify-content: center;
+          } 
         }
       }
     }
@@ -158,6 +169,12 @@ export const BoxText = styled.div`
         position: none;
         top: 0;
         left: 0;
+
+        & div{
+          & nav{
+            padding-top: 20px;
+          }
+        }
       }
 
       & nav{
@@ -209,6 +226,25 @@ export const StyledNameDescription = styled.div`
         text-align: center;
         font-size: 12.5px;
         line-height: 28px;
+      }
+    }
+
+    @media (max-width: 500px){
+      align-items: center;
+
+      & h1{
+        padding-left: 0;
+        font-size: 56px;
+        line-height: 64px;
+      }
+
+      & p{
+        width: 402px;
+        padding-left: 10px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 27px;
+        padding-bottom: 20px;
       }
     }
 `;

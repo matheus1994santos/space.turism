@@ -11,7 +11,6 @@ export const Container = styled.section` /* full Screen 1707px */
     & section{
       display: flex;
       flex-direction: column;
-      /* height: 100%; */
       gap: 40px;
     }
 `;
@@ -38,12 +37,17 @@ export const TitleTech = styled.div`
       font-family: 'Barlow Condensed';
       font-style: normal;
       font-weight: 700;
-      font-size: 28px;
-      line-height: 34px;
       letter-spacing: 4.725px;
       color: #FFFFFF;
       mix-blend-mode: normal;
       opacity: 0.25;
+    }
+
+    @media (max-width: 500px){
+      justify-content: center;
+      padding-left: 0;
+      font-size: 16px;
+      line-height: 19px;
     }
 `;
 
@@ -68,7 +72,12 @@ export const Content = styled.div`
 
       @media (max-width: 770px){
         width: 100%;
-        height: 310px;
+        height: 336px;
+      }
+
+      @media (max-width: 500px){
+        width: 100%;
+        height: 170px;
       }
     }
 `;
@@ -81,7 +90,6 @@ export const TechText = styled.div`
     width: 100%;
 
     & div{
-
       & span{
         display: flex;
         padding: 0;
@@ -99,12 +107,12 @@ export const TechText = styled.div`
       & p{
         font-family: 'Barlow';
         font-style: normal;
-        /* width: 444px; */
+        max-width: 440px;
+        width: 100%;
         font-weight: 400;
         font-size: 18px;
         line-height: 32px;
         color: #D0D6F9;
-        padding-right: 414px;
       }
     }
 
@@ -128,10 +136,29 @@ export const TechText = styled.div`
         }
 
         & p{
-          padding: 0 150px;
+          padding: 0 146px;
           margin: 0;
           text-align: center;
           font-size: 16px;
+        }
+      }
+    }
+
+    @media (max-width: 500px){
+
+      & div{
+        & span{
+          font-size: 14px;
+          line-height: 17px;
+        }
+
+        & p{
+          max-width: 327px;
+          padding: 0;
+          padding-top: 20px;
+          padding-left: 16%;
+          font-size: 15px;
+          line-height: 25px;
         }
       }
     }
@@ -148,6 +175,10 @@ export const ButtonSlide = styled.div`
       flex-direction: row;
       justify-content: center;
       gap: 30px;
+    }
+
+    @media (max-width: 500px){
+      gap: 16px;
     }
 `;
 
@@ -170,8 +201,13 @@ export const StyledStep = styled.button`
       @media (max-width: 770px){
         width: 60px;
         height: 60px;
-      }     
+      }   
       
+      @media (max-width: 770px){
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      } 
 `;
 export const NameTech = styled.div`
     font-family: 'Bellefair';
@@ -186,5 +222,10 @@ export const NameTech = styled.div`
     @media (max-width: 770px){
       padding-top: 0;
       font-size: 40px;
+    }
+
+    @media (max-width: 770px){
+      font-size: 24px;
+      line-height: 28px;
     }
 `;
