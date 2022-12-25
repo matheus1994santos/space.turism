@@ -6,6 +6,7 @@ export const Container = styled.section` /* full Screen 1707px */
 
     @media (max-width: 770px){
       padding: 0;
+      padding-bottom: 40px;
     }
 
     & section{

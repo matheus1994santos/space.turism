@@ -18,7 +18,7 @@ export const Menu = ({list}) => {
   return (
     <StyledMenu>
         <div>
-            <img src={Logo} />
+            <NavLink to={'/'}><img src={Logo} /></NavLink>
             <div></div>
             {
               screenSizeWidth > 556 ? (

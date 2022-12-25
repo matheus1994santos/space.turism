@@ -39,7 +39,7 @@ export const BoxMoon = styled.div`
 
     @media (max-width: 770px){
       position: initial;
-      gap: 30px;
+      gap: 20px;
       align-items: initial;
     }
 
@@ -69,8 +69,8 @@ export const BoxMoon = styled.div`
     & img{
       position: relative;
       left: 76px;
-      width: 445px;
-      height: 445px; 
+      max-width: 445px;
+      max-height: 445px; 
       background-repeat : no-repeat;
       background-size: cover;
 
@@ -209,7 +209,7 @@ export const StyledNameDescription = styled.div`
 
     & h1{
       margin: 0;
-      margin: 16px 0;
+      padding: 16px 0;
       padding: 0;
       font-family: 'Bellefair';
       font-style: normal;
@@ -298,6 +298,7 @@ export const StyledDistanceTravel = styled.div`
 
     @media (max-width: 770px){
       align-items: center;
+      padding-top: 40px;
 
       & p{
         font-size: 12px;

@@ -63,7 +63,7 @@ export const BoxCrew = styled.div`
     width: 100%;
 
     @media (max-width: 770px){
-      padding-top: 20px;
+      padding-top: 40px;
     }
 
     @media (max-width: 556px){
@@ -141,7 +141,7 @@ export const InfoCrew = styled.div`
           font-size: 38px;
           line-height: 52px;
           text-align: center;
-          /* padding-left: 64px; */
+          padding-top: 20px;
         }
       }
       
@@ -166,8 +166,9 @@ export const InfoCrew = styled.div`
     }
 
     @media (max-width: 770px){
-     padding-top: 0;
+     padding-top: 10px;
      align-items: center;
+     gap: 20px;
     }
 
     @media (max-width: 556px){

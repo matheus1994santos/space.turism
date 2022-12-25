@@ -19,7 +19,7 @@ export const Container = styled.section` /* full Screen 1707px */
             padding: 0;
             padding-top: 100px;
             flex-direction: column;
-            gap: 106px;
+            gap: 156px;
         }
 
         @media (max-width: 556px){
@@ -148,7 +148,7 @@ export const CircleText = styled.article`
     color: #0B0D17;
 
     @media (max-width: 1440px){
-      margin-right: 60px;
+      padding-right: 60px;
     }
 
     @media (max-width: 1440px){
