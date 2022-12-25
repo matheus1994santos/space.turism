@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { screenSizeWidth } from "../../utils/screensize";
 
 const screenHeight = window.screen.height;
-console.log(screenSizeWidth)
 
 export const StyledPage = styled.main` /* full Screen 1707px */
     width: 100%;
