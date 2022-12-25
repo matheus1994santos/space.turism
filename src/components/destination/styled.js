@@ -7,7 +7,6 @@ export const Container = styled.section`
     & section{
       display: flex;
       gap: 160px;
-      height: 100%;
 
       @media (max-width: 1440px){
         padding-left: 120px;
@@ -26,7 +25,6 @@ export const Container = styled.section`
       padding: 0;
     }
 `;
-
 
 export const BoxMoon = styled.div`
     position: relative;
@@ -83,11 +81,11 @@ export const BoxMoon = styled.div`
         height: 300px; 
       }
 
-      @media (max-width: 500px){
+      @media (max-width: 556px){
         position: initial;
         width: 180px;
         height: 180px;
-        padding-left: 150px;
+        margin: 0 auto;
       }
     }
 `;
@@ -98,7 +96,6 @@ export const BoxText = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
 
     & article{
       position: relative;
@@ -107,7 +104,6 @@ export const BoxText = styled.div`
       display: flex;
       flex-direction: column;
       width: 445px;
-      /* height: 472px; */
 
       & div{
         display: flex;
@@ -118,7 +114,7 @@ export const BoxText = styled.div`
           padding-top: 70px;
           border-top: 1px solid #383B4B;
 
-          @media (max-width: 500px){
+          @media (max-width: 556px){
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -161,7 +157,7 @@ export const BoxText = styled.div`
             padding-left: 110px;
           } 
 
-          @media (max-width: 500px){
+          @media (max-width: 556px){
             padding-left: 0;
             width: 100%;
             justify-content: center;
@@ -187,6 +183,22 @@ export const BoxText = styled.div`
 
       & nav{
         padding-top: 20px;
+      }
+    }
+
+    @media (max-width: 556px){
+
+      & article {
+
+        & div{
+          & nav{
+            padding-top: 0px;
+          }
+        }
+      }
+
+      & nav{
+        padding-top: 0px;
       }
     }
 `;
@@ -237,7 +249,7 @@ export const StyledNameDescription = styled.div`
       }
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 556px){
       align-items: center;
 
       & h1{
@@ -247,7 +259,7 @@ export const StyledNameDescription = styled.div`
       }
 
       & p{
-        width: 402px;
+        width: 327px;
         height: 128px;
         padding-left: 10px;
         text-align: center;

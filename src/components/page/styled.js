@@ -20,7 +20,7 @@ export const StyledPage = styled.main` /* full Screen 1707px */
       max-height: 1024px;
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 556px){
       max-height: 906px;
     }
 `;

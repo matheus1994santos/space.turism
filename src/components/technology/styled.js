@@ -11,7 +11,6 @@ export const Container = styled.section` /* full Screen 1707px */
     & section{
       display: flex;
       flex-direction: column;
-      gap: 40px;
     }
 `;
 
@@ -28,10 +27,6 @@ export const TitleTech = styled.div`
     padding-left: 68px;
     padding-top: 40px;
 
-    @media (max-width: 1440px){
-      padding-left: 46px;
-    }
-
     & p{
       padding-right: 14px;
       font-family: 'Barlow Condensed';
@@ -43,11 +38,16 @@ export const TitleTech = styled.div`
       opacity: 0.25;
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 1440px){
+      padding-left: 46px;
+    }
+
+    @media (max-width: 556px){
       justify-content: center;
       padding-left: 0;
       font-size: 16px;
       line-height: 19px;
+      padding-top: 10px;
     }
 `;
 
@@ -59,9 +59,12 @@ export const Content = styled.div`
       flex-direction: column-reverse;
     }
 
+    @media (max-width: 556px){
+      gap: 36px;
+    }
+
     & img{
-      width: 615px;
-      height: 627px;
+      max-height: 617px;
       background-size: cover;
       background-repeat: no-repeat;
 
@@ -72,10 +75,10 @@ export const Content = styled.div`
 
       @media (max-width: 770px){
         width: 100%;
-        height: 336px;
+        max-height: 326px;
       }
 
-      @media (max-width: 500px){
+      @media (max-width: 556px){
         width: 100%;
         height: 170px;
       }
@@ -85,6 +88,7 @@ export const Content = styled.div`
 export const TechText = styled.div`
     display: flex;
     gap: 68px;
+    align-items: center;
     padding-top: 140px;
     padding-left: 90px;
     width: 100%;
@@ -122,9 +126,9 @@ export const TechText = styled.div`
 
     @media (max-width: 770px){
       padding-left: 0;
-      padding-top: 40px;
+      padding-top: 30px;
       flex-direction: column;
-      gap: 38px; 
+      gap: 18px; 
 
       & div{
         text-align: center;
@@ -144,8 +148,8 @@ export const TechText = styled.div`
       }
     }
 
-    @media (max-width: 500px){
-
+    @media (max-width: 556px){
+      gap: 46px;
       & div{
         & span{
           font-size: 14px;
@@ -156,7 +160,6 @@ export const TechText = styled.div`
           max-width: 327px;
           padding: 0;
           padding-top: 20px;
-          padding-left: 16%;
           font-size: 15px;
           line-height: 25px;
         }
@@ -177,8 +180,8 @@ export const ButtonSlide = styled.div`
       gap: 30px;
     }
 
-    @media (max-width: 500px){
-      gap: 16px;
+    @media (max-width: 556px){
+      gap: 26px;
     }
 `;
 
@@ -203,12 +206,13 @@ export const StyledStep = styled.button`
         height: 60px;
       }   
       
-      @media (max-width: 770px){
+      @media (max-width: 556px){
         width: 40px;
         height: 40px;
         font-size: 16px;
       } 
 `;
+
 export const NameTech = styled.div`
     font-family: 'Bellefair';
     font-style: normal;
@@ -224,7 +228,7 @@ export const NameTech = styled.div`
       font-size: 40px;
     }
 
-    @media (max-width: 770px){
+    @media (max-width: 556px){
       font-size: 24px;
       line-height: 28px;
     }

@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
-import { screenSizeWidth } from "../../utils/screensize";
-
-console.log(screenSizeWidth)
-
-export const StyledMenu = styled.section`/* full Screen 1707px */
-    padding: 58px 0 0 4%;
+export const StyledMenu = styled.section`
+    padding: 55px 0 0 4%;
     color: black;
 
     
@@ -133,7 +129,7 @@ export const NumberDesk = styled.span`
         display: none;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 556px) {
         display: initial;
     }
 `;
