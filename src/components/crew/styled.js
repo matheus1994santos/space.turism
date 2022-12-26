@@ -10,13 +10,12 @@ export const Container = styled.section` /* full Screen 1707px */
     & section{
       display: flex;
       justify-content: space-between;
-      height: 100%;
 
       @media (max-width: 770px){
         flex-direction: column;
       }
 
-      @media (max-width: 500px){
+      @media (max-width: 556px){
         flex-direction: column-reverse;
       }
     }
@@ -39,7 +38,7 @@ export const PageTitle = styled.div`
   font-size: 28px;
   line-height: 32px;
   color: #D0D6F9;
-  padding-left: 60px;
+  padding-left: 36px;
 
   & span{
     width: 488px;
@@ -54,34 +53,39 @@ export const PageTitle = styled.div`
     line-height: 24px;
   }
 
-  @media (max-width: 500px){
+  @media (max-width: 556px){
     font-size: 16px;
     line-height: 19px;
-    text-align: center;
-    padding-left: 10px;
-    padding-top: 26px;
-    padding-bottom: 36px;
+    padding: 0;
+    padding-left: 112px;
   }
 `;
 
 export const BoxCrew = styled.div`
-    padding-top: 70px;
     padding-left: 3.8%;
+    width: 100%;
 
     @media (max-width: 770px){
-      padding-top: 20px;
+      padding-top: 40px;
+    }
+
+    @media (max-width: 556px){
+      padding-left: 0;
     }
 `;
 
 export const BoxImgCrew = styled.div`
     display: flex;
-    padding-right: 110px;
+    width: 100%;
+    justify-content: center;
+    padding-left: 50px;
 
     & div{
       display: none;
     }
 
     & img{
+      max-width: 568px;
       max-height: 712px;
 
       @media (max-width: 1440px){
@@ -93,7 +97,8 @@ export const BoxImgCrew = styled.div`
       }
 
       @media (max-width: 500px){
-        max-height: 282px;
+        width: 177.12px;
+        height: 242px;
       }
     }
 
@@ -102,15 +107,16 @@ export const BoxImgCrew = styled.div`
     }
 
     @media (max-width: 770px){
-      padding-top: 0;
+      padding-top: 30px;
       padding-right: 0;
       width: 100%;
       justify-content: center;
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 556px){
       flex-direction: column;
       align-items: center;
+      padding-left: 10px;
       & div{
         display: flex;
         width: 370px;
@@ -130,7 +136,7 @@ export const InfoCrew = styled.div`
         font-family: 'Bellefair';
         font-style: normal;
         font-weight: 400;
-        font-size: 56px;
+        font-size: 52px;
         line-height: 64px;
         text-transform: uppercase;
         color: #FFFFFF;
@@ -140,7 +146,7 @@ export const InfoCrew = styled.div`
           font-size: 38px;
           line-height: 52px;
           text-align: center;
-          /* padding-left: 64px; */
+          padding-top: 20px;
         }
       }
       
@@ -149,7 +155,8 @@ export const InfoCrew = styled.div`
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
-        height: 180px;
+        width: 444px;
+        height: 128px;
         line-height: 32px;
         color: #D0D6F9;
         max-width: 444px;
@@ -158,18 +165,19 @@ export const InfoCrew = styled.div`
           font-size: 16px;
           line-height: 28px;
           text-align: center;
-          height: 120px;
+          max-height: 120px;
           max-width: 458px;
         }
       }
     }
 
     @media (max-width: 770px){
-     padding-top: 0;
+     padding-top: 10px;
      align-items: center;
+     gap: 20px;
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 556px){
       flex-direction: column-reverse;
       gap: 30px;
       padding-top: 26px;
@@ -206,7 +214,7 @@ export const Role = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 500px){
+  @media (max-width: 556px){
     padding-bottom: 20px;
     font-size: 16px;
     line-height: 18px; 
@@ -240,7 +248,7 @@ export const Slide = styled.ul`
      }
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 556px){
     padding-bottom: 10px;
 
      & li{

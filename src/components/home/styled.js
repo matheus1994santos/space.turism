@@ -9,7 +9,7 @@ export const Container = styled.section` /* full Screen 1707px */
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        padding-top: 306px;
+        padding-top: 256px;
 
         @media (max-width: 1440px){
             padding-top: 344px;
@@ -19,14 +19,14 @@ export const Container = styled.section` /* full Screen 1707px */
             padding: 0;
             padding-top: 100px;
             flex-direction: column;
-            gap: 106px;
+            gap: 156px;
         }
 
-        @media (max-width: 500px){
+        @media (max-width: 556px){
             padding: 0;
             padding-top: 40px;
             flex-direction: column;
-            gap: 230px;
+            gap: 140px;
             height: 667;
         }
     }
@@ -40,8 +40,8 @@ export const BoxText = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 450px;
-    height: 382px;
+    max-width: 450px;
+    max-height: 382px;
     padding-left: 76px;
 
 
@@ -106,7 +106,7 @@ export const BoxText = styled.div`
         }
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 556px){
         padding: 0;
         justify-content: center;
         align-items: center;
@@ -126,7 +126,7 @@ export const BoxText = styled.div`
             text-align: center;
             padding: 0 28px;
             width: initial;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 28px;
         }
     }
@@ -148,14 +148,14 @@ export const CircleText = styled.article`
     color: #0B0D17;
 
     @media (max-width: 1440px){
-      margin-right: 60px;
+      padding-right: 60px;
     }
 
     @media (max-width: 1440px){
       margin-right: 0;
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 556px){
         padding: 0;
         padding: 0;
         width: 150px;

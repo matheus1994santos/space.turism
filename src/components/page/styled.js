@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { screenSizeWidth, screenSizeHeight } from "../../utils/screensize";
+import { screenSizeWidth } from "../../utils/screensize";
 
 const screenHeight = window.screen.height;
 
@@ -18,9 +18,11 @@ export const StyledPage = styled.main` /* full Screen 1707px */
 
     @media (max-width: 770px){
       max-height: 1024px;
+      padding-bottom: 80px;
     }
 
-    @media (max-width: 500px){
+    @media (max-width: 556px){
       max-height: 906px;
+      padding-bottom: 0px;
     }
 `;

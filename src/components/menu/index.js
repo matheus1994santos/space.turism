@@ -21,7 +21,7 @@ export const Menu = ({list}) => {
             <NavLink to={'/'}><img src={Logo} /></NavLink>
             <div></div>
             {
-              screenSizeWidth > 500 ? (
+              screenSizeWidth > 556 ? (
                 <Options>
                 <ul>
                   <NavLink to={'/'}><li><NumberDesk>00</NumberDesk> Home</li></NavLink>
