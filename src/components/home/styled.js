@@ -17,17 +17,17 @@ export const Container = styled.section` /* full Screen 1707px */
 
         @media (max-width: 770px){
             padding: 0;
-            padding-top: 100px;
+            padding-top: 180px;
             flex-direction: column;
-            gap: 156px;
+            gap: 220px;
         }
 
         @media (max-width: 556px){
             padding: 0;
             padding-top: 40px;
             flex-direction: column;
-            gap: 140px;
-            height: 667;
+            gap: 220px;
+            /* height: 667; */
         }
     }
 
@@ -153,6 +153,12 @@ export const CircleText = styled.article`
 
     @media (max-width: 1440px){
       margin-right: 0;
+    }
+
+    @media (max-width: 770px){
+        padding: 0;
+        width: 242px;
+        height: 242px;
     }
 
     @media (max-width: 556px){

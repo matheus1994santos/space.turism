@@ -17,7 +17,7 @@ export const Container = styled.section`
         flex-direction: column;
         height: auto;
         padding: 0;
-        padding-top: 20px;
+        padding-top: 60px;
       }
     }
 
@@ -39,7 +39,7 @@ export const BoxMoon = styled.div`
 
     @media (max-width: 770px){
       position: initial;
-      gap: 20px;
+      gap: 40px;
       align-items: initial;
     }
 

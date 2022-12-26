@@ -57,7 +57,7 @@ export const PageTitle = styled.div`
     font-size: 16px;
     line-height: 19px;
     padding: 0;
-    padding-left: 112px;
+    text-align: center;
   }
 `;
 
@@ -85,7 +85,6 @@ export const BoxImgCrew = styled.div`
     }
 
     & img{
-      max-width: 568px;
       max-height: 712px;
 
       @media (max-width: 1440px){
@@ -96,9 +95,8 @@ export const BoxImgCrew = styled.div`
         max-height: 552px;
       }
 
-      @media (max-width: 500px){
-        width: 177.12px;
-        height: 242px;
+      @media (max-width: 556px){
+        max-height: 242px;
       }
     }
 
