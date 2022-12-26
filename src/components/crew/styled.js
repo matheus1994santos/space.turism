@@ -82,7 +82,6 @@ export const BoxImgCrew = styled.div`
     }
 
     & img{
-      max-width: 568px;
       max-height: 712px;
 
       @media (max-width: 1440px){
@@ -90,13 +89,11 @@ export const BoxImgCrew = styled.div`
       }
       
       @media (max-width: 770px){
-        width: 458px;
-        height: 552px;
+        max-height: 552px;
       }
 
       @media (max-width: 500px){
-        width: 177.12px;
-        height: 242px;
+        max-height: 282px;
       }
     }
 

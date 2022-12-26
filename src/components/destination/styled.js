@@ -27,7 +27,6 @@ export const Container = styled.section`
     }
 `;
 
-
 export const BoxMoon = styled.div`
     position: relative;
     top: 55px;

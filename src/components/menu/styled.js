@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { screenSizeWidth } from "../../utils/screensize";
+import { screenSizeWidth, screenSizeHeight } from "../../utils/screensize";
 
-console.log(screenSizeWidth)
+console.log(screenSizeWidth, screenSizeHeight)
 
 export const StyledMenu = styled.section`/* full Screen 1707px */
     padding: 58px 0 0 4%;
@@ -139,6 +139,9 @@ export const NumberDesk = styled.span`
 `;
 
 export const OptionsMobile = styled.nav`
+    position: fixed;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     max-width: 254px;
@@ -146,7 +149,7 @@ export const OptionsMobile = styled.nav`
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(39.7742px);
     color: white;
-    height: 667px;
+    height: ${screenSizeHeight + 'px'};
     padding-top: 40px;
 
     & ul{
@@ -155,7 +158,6 @@ export const OptionsMobile = styled.nav`
         list-style-type: none;
         font-family: 'Barlow Condensed';
         padding-bottom: 40px;
-        padding-top: 30px;
 
         gap: 30px;
 
@@ -176,7 +178,7 @@ export const OptionsMobile = styled.nav`
     }
 
     & nav{
-        padding-top: 300px;
+        /* padding-top: 300px; */
         text-align: right;
         padding-right: 20px;
         & img{
