@@ -6,8 +6,7 @@ const screenHeight = window.screen.height;
 
 export const StyledPage = styled.main` /* full Screen 1707px */
     width: 100%;
-    max-height: 1000px;
-    height: ${screenHeight + 'px'};
+    height: 975px;
     background-color: rgb(0,0,0);
     color: rgb(255,255,255);
     background-image: url(${props => props.image});
