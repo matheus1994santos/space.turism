@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { screenSizeWidth } from "../../utils/screensize";
+
+console.log(screenSizeWidth)
 
 export const Container = styled.section` /* full Screen 1707px */
     padding: 56px 10.6% 0 10.6%;
@@ -152,6 +155,7 @@ export const InfoCrew = styled.div`
         height: 180px;
         line-height: 32px;
         color: #D0D6F9;
+        max-width: 444px;
 
         @media (max-width: 770px){
           font-size: 16px;
