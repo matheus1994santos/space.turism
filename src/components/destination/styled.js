@@ -19,6 +19,10 @@ export const Container = styled.section`
         padding: 0;
         padding-top: 60px;
       }
+
+      @media (max-width: 556px){
+        padding-top: 0px;
+      }
     }
 
     @media (max-width: 1440px){
