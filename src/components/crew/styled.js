@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import { screenSizeHeight, screenSizeWidth } from "../../utils/screensize";
-
-console.log(screenSizeWidth, screenSizeHeight)
 
 export const Container = styled.section` /* full Screen 1707px */
     padding: 56px 10.6% 0 10.6%;
