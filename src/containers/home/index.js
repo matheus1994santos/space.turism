@@ -2,7 +2,7 @@ import React from "react";
 // TODO: BoxText = StyledTextBox, CircleText = StyledCircleText
 // TODO: Import arquivos da pasta local sempre por ultimo, styled deveria ser o ultimo import.
 import { StyledTextBox, StyledCircleText, Container } from "./styled";
-import  Page  from "../page";
+import  Page  from "../../components/Page";
 
 const Home = () => {
   return (

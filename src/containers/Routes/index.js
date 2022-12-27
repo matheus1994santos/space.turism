@@ -5,7 +5,7 @@
 // TODO: Adicionar um export default em cada um dos componentes, e importar de forma absoluta(sem as chaves)
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import  Home  from "../home";
+import  Home from '../home'
 import  Destinations  from "../destination";
 import  Crew  from "../crew";
 import  Technology  from "../technology";

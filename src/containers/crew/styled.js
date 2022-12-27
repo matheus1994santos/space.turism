@@ -136,6 +136,10 @@ export const StytedInfoCrew = styled.div`
         text-transform: uppercase;
         color: #FFFFFF;
 
+        @media (max-width: 1440px){
+          font-size: 47px;
+        }
+
         @media (max-width: 770px){
           display: block;
           font-size: 38px;

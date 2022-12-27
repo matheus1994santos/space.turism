@@ -2,7 +2,7 @@
 import React from "react";
 
 import requestData from "../../utils/requestdata";
-import  Page  from "../page";
+import  Page  from "../../components/Page";
 
 import {
   StyledButtonSlide,

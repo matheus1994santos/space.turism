@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
-import { Menu } from '../menu'
+import { Menu } from '../Menu'
 
 import {getMenuPaths , getHomeImg} from './helpers'
 import { StyledPage } from './styled'
