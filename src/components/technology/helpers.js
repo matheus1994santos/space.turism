@@ -9,7 +9,7 @@ import { screenSizeWidth } from '../../utils/screensize'
 
 
 
-export function technoImgVerif(img){
+export function getTechImage(img){
 
   if(screenSizeWidth > 770){
     if(img === 0){

@@ -4,7 +4,7 @@ import Europa from '../../assets/destination/image-europa.png'
 import Mars from '../../assets/destination/image-mars.png'
 import Titan from '../../assets/destination/image-titan.png'
 
-export function sateVerif(moon){
+export function getDestinationImg(moon){
 
   if(moon === 'Moon'){
     return Moon;

@@ -6,7 +6,7 @@ import { screenSizeWidth } from '../../utils/screensize'
 import Bclose from '../../assets/shared/icon-close.svg'
 import Hamburger from '../../assets/shared/icon-hamburger.svg'
 
-import { Options, StyledMenu, NumberDesk, OptionsMobile, IconHamburger } from './styled'
+import { StyledOptions, StyledMenu, StyledNumberDesk , StyledOptionsMobile, StyledIconHamburger } from './styled'
 
 
 export const Menu = ({list}) => {
@@ -22,39 +22,39 @@ export const Menu = ({list}) => {
             <div></div>
             {
               screenSizeWidth > 556 ? (
-                <Options>
+                <StyledOptions>
                 <ul>
-                  <NavLink to={'/'}><li><NumberDesk>00</NumberDesk> Home</li></NavLink>
+                  <NavLink to={'/'}><li><StyledNumberDesk >00</StyledNumberDesk > Home</li></NavLink>
                   {list && list.map((name, index) => (
                     <NavLink 
                       to={`/${name}`}
                       key={name}
                     >
-                    <li><NumberDesk>0{ index + 1 }</NumberDesk> { name}</li>
+                    <li><StyledNumberDesk >0{ index + 1 }</StyledNumberDesk > { name}</li>
                     </NavLink>
                   ))}
                 </ul>
-            </Options>
+            </StyledOptions>
               ) : (
                 !ativo ? (
-                <IconHamburger>
+                <StyledIconHamburger>
                   <img onClick={activeMenu} src={Hamburger} className={'Burger'}/>
-                </IconHamburger>
+                </StyledIconHamburger>
                   ) : (
-                    <OptionsMobile>
+                    <StyledOptionsMobile>
                     <nav><img onClick={activeMenu} src={Bclose}/></nav>
                     <ul>
-                      <NavLink to={'/'}><li><NumberDesk>00</NumberDesk> Home</li></NavLink>
+                      <NavLink to={'/'}><li><StyledNumberDesk >00</StyledNumberDesk > Home</li></NavLink>
                       {list && list.map((name, index) => (
                         <NavLink 
                           to={`/${name}`}
                           key={name}
                         >
-                        <li><NumberDesk>0{ index + 1 }</NumberDesk> { name}</li>
+                        <li><StyledNumberDesk >0{ index + 1 }</StyledNumberDesk > { name}</li>
                         </NavLink>
                       ))}
                     </ul>
-                  </OptionsMobile>
+                  </StyledOptionsMobile>
                   )
               )
 

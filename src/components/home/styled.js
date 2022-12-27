@@ -37,7 +37,7 @@ export const Container = styled.section`
   }
 `;
 
-export const BoxText = styled.div`
+export const StyledTextBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -131,7 +131,7 @@ export const BoxText = styled.div`
   }
 `;
 
-export const CircleText = styled.article`
+export const StyledCircleText = styled.article`
   display: flex;
   justify-content: center;
   align-items: center;

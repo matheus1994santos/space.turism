@@ -15,7 +15,7 @@ export const Container = styled.section` /* full Screen 1707px */
     }
 `;
 
-export const TitleTech = styled.div`
+export const StyledTitleTech = styled.div`
     display: flex;
     align-items: center;
     font-family: 'Barlow Condensed';
@@ -86,7 +86,7 @@ export const Content = styled.div`
     }
 `;
 
-export const TechText = styled.div`
+export const StyledTechText = styled.div`
     display: flex;
     gap: 68px;
     align-items: center;
@@ -168,7 +168,7 @@ export const TechText = styled.div`
     }
 `;
 
-export const ButtonSlide = styled.div`
+export const StyledButtonSlide = styled.div`
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -214,7 +214,7 @@ export const StyledStep = styled.button`
       } 
 `;
 
-export const NameTech = styled.div`
+export const StyledNameTech = styled.div`
     font-family: 'Bellefair';
     font-style: normal;
     font-weight: 400;

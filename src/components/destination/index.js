@@ -1,61 +1,49 @@
-// TODO: Limpar espaços
-// TODO: Importar arquivos locais por ultimo e agrupar imports = Dependencias > externos > locais
 import React from "react";
 
-import { Page } from "../page";
-
+import  Page  from "../page";
 import requestData from "../../utils/requestdata";
 
-import { sateVerif } from "./helpers";
-
-// TODO: Renomear BoxMoon => StyledImageBox
-// TODO: Renomear BoxText => StyledDestinationsInfo
+import { getDestinationImg } from "./helpers";
 import {
-  BoxMoon,
-  BoxText,
+  StyledImageBox,
+  StyledDestinationsInfo,
   Container,
   StyledDistanceTravel,
   StyledNameDescription,
 } from "./styled";
 
-export const Destinations = () => {
-  // TODO: Renomear state para currentDestination
-  const [sate, setSate] = React.useState(null);
+const Destinations = () => {
+
+  const [currentDestination, setCurrentDestination] = React.useState(null);
   const data = requestData();
-  // TODO: Renomear para destinationNames
-  const listMenu = data.destination.map((dest) => dest.name);
+
+  const destinationNames = data.destination.map((dest) => dest.name);
 
   React.useEffect(() => {
-    setSate(!sate ? "Moon" : sate);
-  }, [sate]);
-
-  // TODO: Renomear para onDestinationClick
-  // TODO: Refatorar para aceitar destinationName e passar para o state, substituindo então o e.target.innerHTML
-  function activeStyle(e) {
-    setSate(e.target.innerHTML);
-  }
+    setCurrentDestination(!currentDestination ? "Moon" : currentDestination);
+  }, [currentDestination]);
 
   return (
     <Page>
       <Container>
         <section>
-          <BoxMoon>
+          <StyledImageBox>
             <p>
               <span>01</span> PICK YOUR DESTINATION
             </p>
-            <img src={sateVerif(sate)} />
-          </BoxMoon>
+            <img src={getDestinationImg(currentDestination)} />
+          </StyledImageBox>
 
-          <BoxText>
+          <StyledDestinationsInfo>
             <article>
               <nav>
                 <ul>
-                  {listMenu &&
-                    listMenu.map((name, index) => (
+                  {destinationNames &&
+                    destinationNames.map((name, index) => (
                       <li
                         key={index}
-                        onClick={activeStyle}
-                        className={name === sate ? "active" : ""}
+                        onClick={() => setCurrentDestination(name)}
+                        className={name === currentDestination ? "active" : ""}
                       >
                         {name}
                       </li>
@@ -65,7 +53,7 @@ export const Destinations = () => {
               {data &&
                 data.destination.map(
                   ({ name, description, distance, travel }) =>
-                    sate === name ? (
+                    currentDestination === name ? (
                       <div key={name}>
                         <StyledNameDescription>
                           <h1> {name} </h1>
@@ -86,9 +74,12 @@ export const Destinations = () => {
                     ) : null
                 )}
             </article>
-          </BoxText>
+          </StyledDestinationsInfo>
         </section>
       </Container>
     </Page>
   );
 };
+
+
+export default Destinations;

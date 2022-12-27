@@ -56,7 +56,7 @@ export const StyledMenu = styled.section`
     }
 `;
 
-export const Options = styled.nav`
+export const StyledOptions = styled.nav`
     display: flex;
     align-items: center;
     max-width: 1090px;
@@ -123,7 +123,7 @@ export const Options = styled.nav`
     }
 `;
 
-export const NumberDesk = styled.span`
+export const StyledNumberDesk = styled.span`
     /* display: inline; */
 
     @media (max-width: 770px) {
@@ -135,7 +135,7 @@ export const NumberDesk = styled.span`
     }
 `;
 
-export const OptionsMobile = styled.nav`
+export const StyledOptionsMobile = styled.nav`
     position: fixed;
     top: 0;
     right: 0;
@@ -186,7 +186,7 @@ export const OptionsMobile = styled.nav`
     }
 `;
 
-export const IconHamburger = styled.nav`
+export const StyledIconHamburger = styled.nav`
     width: 60px;
     
     & img.Burger{

@@ -1,15 +1,15 @@
 import React from "react";
 // TODO: BoxText = StyledTextBox, CircleText = StyledCircleText
 // TODO: Import arquivos da pasta local sempre por ultimo, styled deveria ser o ultimo import.
-import { BoxText, CircleText, Container } from "./styled";
-import { Page } from "../page";
+import { StyledTextBox, StyledCircleText, Container } from "./styled";
+import  Page  from "../page";
 
-export const Home = () => {
+const Home = () => {
   return (
     <Page>
       <Container>
         <section>
-          <BoxText>
+          <StyledTextBox>
             <span>SO, YOU WANT TO TRAVEL TO </span>
             <h1>SPACE</h1>
             <p>
@@ -18,15 +18,17 @@ export const Home = () => {
               it. Well sit back, and relax because we’ll give you a truly out of
               this world experience!
             </p>
-          </BoxText>
+          </StyledTextBox>
           {
             //
           }
           <div>
-            <CircleText>EXPLORE</CircleText>
+            <StyledCircleText>EXPLORE</StyledCircleText>
           </div>
         </section>
       </Container>
     </Page>
   );
 };
+
+export default Home;

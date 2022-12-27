@@ -5,7 +5,7 @@ import Victor from '../../assets/crew/image-victor-glover.png'
 import Anousheh from '../../assets/crew/image-anousheh-ansari.png'
 
 
-export function crewVerif(crew){
+export function getCrewMemberImage(crew){
   if(crew === 'Commander'){
     return Douglas;
   } 

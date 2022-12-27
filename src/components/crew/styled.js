@@ -30,7 +30,7 @@ export const Container = styled.section` /* full Screen 1707px */
     }
 `;
 
-export const PageTitle = styled.div`
+export const StyledPageTitle = styled.div`
   width: 444px;
   font-family: 'Barlow';
   font-style: normal;
@@ -61,7 +61,7 @@ export const PageTitle = styled.div`
   }
 `;
 
-export const BoxCrew = styled.div`
+export const StyledCrewInfo = styled.div`
     padding-left: 3.8%;
     width: 100%;
 
@@ -74,7 +74,7 @@ export const BoxCrew = styled.div`
     }
 `;
 
-export const BoxImgCrew = styled.div`
+export const StyledCrewImgBox = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
@@ -123,7 +123,7 @@ export const BoxImgCrew = styled.div`
     }
 `;
 
-export const InfoCrew = styled.div`
+export const StytedInfoCrew = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 140px;
@@ -195,7 +195,7 @@ export const InfoCrew = styled.div`
     }
 `;
 
-export const Role = styled.div`
+export const StyledRole = styled.div`
   font-family: 'Bellefair';
   font-style: normal;
   font-weight: 400;
@@ -219,7 +219,7 @@ export const Role = styled.div`
   }
 `;
 
-export const Slide = styled.ul`
+export const StyledSlide = styled.ul`
     margin: 0;
     padding: 0;
     padding-top: 80px;

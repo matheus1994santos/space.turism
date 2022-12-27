@@ -20,7 +20,7 @@ import CrewMobile from '../../assets/crew/background-crew-mobile.jpg'
 import TechnologyMobile from '../../assets/technology/background-technology-mobile.jpg'
 
 
-export function imgVerif(path){
+export function getHomeImg(path){
 
   if( screenSizeWidth > 770 ){
     if(path === '/destination'){

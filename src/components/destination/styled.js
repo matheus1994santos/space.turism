@@ -30,7 +30,7 @@ export const Container = styled.section`
     }
 `;
 
-export const BoxMoon = styled.div`
+export const StyledImageBox = styled.div`
     position: relative;
     top: 55px;
     left: 38px;
@@ -94,7 +94,7 @@ export const BoxMoon = styled.div`
     }
 `;
 
-export const BoxText = styled.div`
+export const StyledDestinationsInfo = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;

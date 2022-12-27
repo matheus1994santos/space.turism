@@ -2,24 +2,20 @@
 import React from "react";
 
 import requestData from "../../utils/requestdata";
+import  Page  from "../page";
 
-import { Page } from "../page";
-
-// TODO: Adicionar Styled na nomenclatura
 import {
-  ButtonSlide,
+  StyledButtonSlide,
   Container,
   Content,
-  NameTech,
+  StyledNameTech,
   StyledStep,
-  TechText,
-  TitleTech,
+  StyledTechText,
+  StyledTitleTech,
 } from "./styled";
+import { getTechImage } from "./helpers";
 
-// TODO: Renomear função para getTechImage
-import { technoImgVerif } from "./helpers";
-
-export const Technology = () => {
+const Technology = () => {
   const data = requestData();
 
   const [currentStep, setCurrentStep] = React.useState(0);
@@ -28,13 +24,13 @@ export const Technology = () => {
     <Page>
       <Container>
         <section>
-          <TitleTech>
+          <StyledTitleTech>
             <p>03</p>
             <span>SPACE LAUNCH 101</span>
-          </TitleTech>
+          </StyledTitleTech>
           <Content>
-            <TechText>
-              <ButtonSlide>
+            <StyledTechText>
+              <StyledButtonSlide>
                 {data &&
                   data.technology.map((props, index) => (
                     <StyledStep
@@ -45,23 +41,25 @@ export const Technology = () => {
                       {index + 1}
                     </StyledStep>
                   ))}
-              </ButtonSlide>
+              </StyledButtonSlide>
               {data &&
                 data.technology.map(({ name, description }, index) =>
                   currentStep === index ? (
                     <div key={name}>
                       <span>THE TERMINOOGY...</span>
-                      <NameTech>{name.toUpperCase()}</NameTech>
+                      <StyledNameTech>{name.toUpperCase()}</StyledNameTech>
                       <p>{description}</p>
                     </div>
                   ) : null
                 )}
-            </TechText>
+            </StyledTechText>
 
-            <img src={technoImgVerif(currentStep)} />
+            <img src={getTechImage(currentStep)} />
           </Content>
         </section>
       </Container>
     </Page>
   );
 };
+
+export default Technology;
