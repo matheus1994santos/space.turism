@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import  Page  from "../../components/Page";
 import requestData from "../../utils/requestdata";
@@ -12,12 +13,30 @@ import {
   StyledNameDescription,
 } from "./styled";
 
-const Destinations = () => {
+import { requestDestinations, loadDestinations, loadDestinationsError } from "./slice";
+import { selectRequestingDestination, selectDataDestination, selectDataDestinationNames } from "./selectors";
 
+
+const Destinations = () => {
+  const dispatch = useDispatch();
+  const dataDestination = useSelector(selectDataDestination);
+  const requestingDestination = useSelector(selectRequestingDestination);
   const [currentDestination, setCurrentDestination] = React.useState(null);
   const data = requestData();
+  const destinationNames = useSelector(selectDataDestinationNames);
 
-  const destinationNames = data.destination.map((dest) => dest.name);
+
+  useEffect(() => {
+    dispatch(requestDestinations({ url: 'google.com', status: 'foi sucesso'}));
+  }, [])
+  
+  useEffect(() => {
+    if (requestingDestination) {
+      dispatch(loadDestinations({ destinations: data.destination}))
+    }
+
+    dispatch(loadDestinationsError({ errorMsg: 'Ocorreu um erro'}));
+  }, [requestingDestination])
 
   React.useEffect(() => {
     setCurrentDestination(!currentDestination ? "Moon" : currentDestination);

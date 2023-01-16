@@ -1,6 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-import requestData from "../../utils/requestdata";
 import  Page  from "../../components/Page";
 
 import { getCrewMemberImage } from "./helpers";
@@ -13,11 +13,13 @@ import {
   StyledRole,
   StyledSlide,
 } from "./styled";
+import { selectDataCrew } from "./selectors";
 
 const Crew = () => {
-  const data = requestData(); // dados do json
   const [activeCrew, setActiveCrew] = React.useState(null);
+  const dataCrew = useSelector(selectDataCrew);
 
+  
   React.useEffect(() => {
     setActiveCrew(!activeCrew ? "Commander" : activeCrew); // State recebe logica em caso de null retorno ser o primeiro role do Array
   });
@@ -31,8 +33,8 @@ const Crew = () => {
         <section>
           <StyledCrewInfo>
             <StytedInfoCrew>
-              {data &&
-                data.crew.map(({ name, role, bio }) =>
+              {dataCrew &&
+                dataCrew.map(({ name, role, bio }) =>
                   role === activeCrew ? ( // Aqui é verificado se State for igual a uma das roles ele da print nos dados.
                     <div key={role}>
                       <StyledRole>{role}</StyledRole>
@@ -42,8 +44,8 @@ const Crew = () => {
                   ) : null
                 )}
               <StyledSlide>
-                {data &&
-                  data.crew.map(({ name, role }) => (
+                {dataCrew &&
+                  dataCrew.map(({ name, role }) => (
                     <li
                       onClick={() => setActiveCrew(role)}
                       style={{ opacity: role === activeCrew ? 1 : 0.17 }}

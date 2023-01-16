@@ -1,5 +1,6 @@
 // TODO: Refatorar imports
 import React from "react";
+import { useSelector } from "react-redux";
 
 import requestData from "../../utils/requestdata";
 import  Page  from "../../components/Page";
@@ -14,11 +15,12 @@ import {
   StyledTitleTech,
 } from "./styled";
 import { getTechImage } from "./helpers";
+import { selectDataTechnology } from "./selectors";
 
 const Technology = () => {
-  const data = requestData();
-
   const [currentStep, setCurrentStep] = React.useState(0);
+  const selectData = useSelector(selectDataTechnology)
+  console.log(selectData)
 
   return (
     <Page>
@@ -31,8 +33,8 @@ const Technology = () => {
           <Content>
             <StyledTechText>
               <StyledButtonSlide>
-                {data &&
-                  data.technology.map((props, index) => (
+                {selectData &&
+                  selectData.map((props, index) => (
                     <StyledStep
                       onClick={() => setCurrentStep(index)}
                       key={index}
@@ -42,8 +44,8 @@ const Technology = () => {
                     </StyledStep>
                   ))}
               </StyledButtonSlide>
-              {data &&
-                data.technology.map(({ name, description }, index) =>
+              {selectData &&
+                selectData.map(({ name, description }, index) =>
                   currentStep === index ? (
                     <div key={name}>
                       <span>THE TERMINOOGY...</span>
